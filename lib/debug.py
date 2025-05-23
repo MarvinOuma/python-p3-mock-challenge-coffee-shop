@@ -6,6 +6,11 @@ from classes.many_to_many import Order
 from classes.many_to_many import Coffee
 
 if __name__ == '__main__':
-    print("HELLO! :) let's debug")
+    print("Starting debug session. Use 'n' for next line, 's' for step into, 'c' for continue, and 'q' for quit.")
 
-    ipdb.set_trace()
+    try:
+        ipdb.set_trace()
+    except ImportError:
+        print("Could not start debug session. Please install ipdb: pip install ipdb")
+
+
